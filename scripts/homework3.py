@@ -124,6 +124,12 @@ if __name__ == "__main__":
     class_percents = train_set.iloc[:, -88:].sum(axis=0) / len(train_set) * 100
     non_zero_classes = class_percents > 1
     num_classes = non_zero_classes.astype(int).sum()
+    class_to_index_mapping = {
+        index: name
+        for index, name in enumerate(
+            train_set.iloc[:, -88:].loc[:, non_zero_classes].columns
+        )
+    }
     train_set = pd.concat(
         (
             train_set.loc[:, ["titles", "summaries"]],
@@ -322,5 +328,9 @@ if __name__ == "__main__":
                 results_file_obj,
                 print_test=True,
             )
+
+        print(
+            f"class_to_index_mapping: {class_to_index_mapping}", file=results_file_obj
+        )
 
     results_file_obj.close()
