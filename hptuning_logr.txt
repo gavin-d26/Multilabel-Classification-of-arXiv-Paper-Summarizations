@@ -1,0 +1,6 @@
+Tuning hyperparameters for LogisticRegression...
+Best Parameters for LogisticRegression: {'C': 10, 'penalty': 'l2', 'solver': 'saga', 'max_iter': 100}
+Validation F1 for LogisticRegression: 0.7704
+--------------------------------------------------------------------------------
+Summary of Best Models:
+LogisticRegression: Best Score = 0.7704, Best Params = {'C': 10, 'penalty': 'l2', 'solver': 'saga', 'max_iter': 100}

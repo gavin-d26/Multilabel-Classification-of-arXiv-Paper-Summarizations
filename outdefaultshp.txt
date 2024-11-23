@@ -1,0 +1,50 @@
+--------------------------------------------------
+NaiveBayes
+
+Validation set
+Validation F1 Macro: 0.28553209164191196
+Validation F1 Micro: 0.7562692644316755
+Validation Classification Report
+
+training time: 2.1347265243530273
+inference time: 0.2496931552886963
+--------------------------------------------------
+LinearSVC
+
+Validation set
+Validation F1 Macro: 0.4128644012288145
+Validation F1 Micro: 0.7707779447462721
+Validation Classification Report
+
+training time: 10.095226287841797
+inference time: 0.2503070831298828
+--------------------------------------------------
+DecisionTree
+
+Validation set
+Validation F1 Macro: 0.5523025674701689
+Validation F1 Micro: 0.7755952801526178
+Validation Classification Report
+
+training time: 1629.004542350769
+inference time: 0.5746490955352783
+--------------------------------------------------
+LogisticRegression
+
+Validation set
+Validation F1 Macro: 0.314042901776338
+Validation F1 Micro: 0.7666562889165629
+Validation Classification Report
+
+training time: 13.080567121505737
+inference time: 0.25597548484802246
+--------------------------------------------------
+KNeighbors
+
+Validation set
+Validation F1 Macro: 0.3731544519259877
+Validation F1 Micro: 0.7375170739110639
+Validation Classification Report
+
+training time: 0.9586272239685059
+inference time: 22.27636694908142

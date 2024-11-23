@@ -1,0 +1,6 @@
+Tuning hyperparameters for LinearSVC...
+Best Parameters for LinearSVC: {'C': 1, 'penalty': 'l2'}
+Validation F1 for LinearSVC: 0.7708
+--------------------------------------------------------------------------------
+Summary of Best Models:
+LinearSVC: Best Score = 0.7708, Best Params = {'C': 1, 'penalty': 'l2'}
