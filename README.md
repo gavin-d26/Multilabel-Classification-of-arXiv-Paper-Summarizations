@@ -1,36 +1,40 @@
-# Multilabel-Classification-of-arXiv-Paper-Summarizations
 
+# Multilabel Classification of arXiv Paper Summarizations
 
-1) The type of your best performing model (e.g., Decision Tree)
+## Project Description
+This project focuses on the multilabel classification of arXiv paper summaries. The goal is to accurately classify the summaries into multiple categories based on their content.
 
-Linear SVC 
-HPs -> {'C': 1, 'penalty': 'l2'}
+## Installation
+To set up the environment and install dependencies, follow these steps:
+```bash
+git clone https://github.com/gavin-d26/Multilabel-Classification-of-arXiv-Paper-Summarizations.git
+cd Multilabel-Classification-of-arXiv-Paper-Summarizations
+pip install -r requirements.txt
+```
 
+## Usage
+To run the project, use the following command:
+```bash
+python main.py --input data/input_file.csv --output results/output_file.csv
+```
 
-2) A short description of any data preprocessing you did (e.g., removing stopwords, cleaning up labels, etc.)
+## Data Preprocessing
+The data preprocessing steps include:
+- TF-IDF vectorization with removal of English stop words, 2000 dimensions, ngram_range=(1, 2).
+- Experimentation with PCA to reduce dimensions from 2000 to 250, followed by min-max scaling to the [0,1] range.
+- Classification on all classes and removing classes with less than 1% occurrences.
 
-TF-IDF -> removed english stop words, 2000 dim, ngram_range=(1, 2)
+## Features
+The features used for the best-performing model are as described above but without PCA and min-max scaling.
 
-experimented with PCA 2000 ->250 dims, followed by min-max scaling to [0,1] range
+## Results
+The results of the best-performing model are as follows:
+- **Model:** Linear SVC
+- **Hyperparameters:** {'C': 1, 'penalty': 'l2'}
+- **F1 Macro Score:** 0.4052
+- **F1 Micro Score:** 0.7718
 
-also experimented with classification on ALL CLASSES and by removing classes with less than 1% occurances.
-
-3) A short description of the features you used for the best performing model 
-
-As described above, but without PCA and min-max scaling. (described in report)
-
-4) Your micro and macro F1 scores for your best performing model
-
-Linear SVC with HPs tuned
-
-Test F1 Macro: 0.405197406542662
-
-Test F1 Micro: 0.7718218872567869
-
-
-4) Anything else you’d like me to know about your code, such as any known bugs or mistakes, or just rationale for why you did something a certain way.
-
-some code for PCA, Min-max is now commented out. since its no longer used.
-
+## Future Work
+Future improvements could include further tuning of hyperparameters, experimenting with different models, and enhancing the preprocessing steps.
 
 
